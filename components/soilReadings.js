@@ -10,11 +10,11 @@ export function calculateAvarage(read) {
 }
 export function nitrogenAnalysis(Nitrogen) {
   let evaluation = null;
-  if (Nitrogen >= 0 && Nitrogen <= 280.0) {
+  if (Nitrogen >= 0 && Nitrogen <= 99.0) {
     evaluation = "low";
-  } else if (Nitrogen >= 281 && Nitrogen <= 560) {
+  } else if (Nitrogen >= 99.1 && Nitrogen <= 149.0) {
     evaluation = "medium";
-  } else if (Nitrogen >= 561 && Nitrogen <= 580) {
+  } else if (Nitrogen >= 149.1 && Nitrogen <= 299.0) {
     evaluation = "high";
   } else {
     evaluation = 0;
@@ -24,11 +24,11 @@ export function nitrogenAnalysis(Nitrogen) {
 }
 export function phosphorusAnalysis(Phosphorus) {
   let evaluation = null;
-  if (Phosphorus >= 0.0 && Phosphorus <= 10.0) {
+  if (Phosphorus >= 0 && Phosphorus <= 99.0) {
     evaluation = "low";
-  } else if (Phosphorus >= 10.1 && Phosphorus <= 24.0) {
+  } else if (Phosphorus >= 99.1 && Phosphorus <= 149.0) {
     evaluation = "medium";
-  } else if (Phosphorus >= 24.1 && Phosphorus <= 31.0) {
+  } else if (Phosphorus >= 149.1 && Phosphorus <= 299.0) {
     evaluation = "high";
   } else {
     evaluation = 0;
@@ -37,11 +37,11 @@ export function phosphorusAnalysis(Phosphorus) {
 }
 export function potassiumsAnalysis(potassium) {
   let evaluation = null;
-  if (potassium >= 0.0 && potassium <= 35.0) {
+  if (potassium >= 0 && potassium <= 99.0) {
     evaluation = "low";
-  } else if (potassium >= 35.1 && potassium <= 276.0) {
+  } else if (potassium >= 99.1 && potassium <= 149.0) {
     evaluation = "medium";
-  } else if (potassium >= 275.1 && potassium <= 395.0) {
+  } else if (potassium >= 149.1 && potassium <= 299.0) {
     evaluation = "high";
   } else {
     evaluation = 0;

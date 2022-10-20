@@ -59,11 +59,11 @@ export default function Graph(props) {
     .reverse();
 
   const nAverage = calculateAvarage(n);
-  const Nitrogen = nitrogenAnalysis(nAverage);
+  const nitrogen = nitrogenAnalysis(nAverage);
   const pAverage = calculateAvarage(p);
-  const Phosphorus = phosphorusAnalysis(pAverage);
+  const phosphorus = phosphorusAnalysis(pAverage);
   const kAverage = calculateAvarage(k);
-  const Potassium = potassiumsAnalysis(kAverage);
+  const potassium = potassiumsAnalysis(kAverage);
 
   const defaultData = {
     labels: timestamp, //[0,1,2,3,4,5,6....99]
@@ -74,9 +74,9 @@ export default function Graph(props) {
     <div className="">
       <div className="row">
         <div>
-          <h6>Nitrogen: {Nitrogen}</h6>
-          <h6>Phosphorus: {Phosphorus}</h6>
-          <h6>Potassium : {Potassium}</h6>
+          <h6>Nitrogen: {nitrogen}</h6>
+          <h6>Phosphorus: {phosphorus}</h6>
+          <h6>Potassium : {potassium}</h6>
         </div>
         <div className="col-lg-4">
           <Line
