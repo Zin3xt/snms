@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import moment from "moment";
 import Graph from "./graph";
+import styles from "../styles/nav.module.css";
 
 function DatePicker() {
   const [date, setDate] = useState(moment().startOf("day"));
@@ -18,6 +19,12 @@ function DatePicker() {
   return (
     <>
       <div className="d-flex justify-content-end gap-2">
+        {/* <div className=" justify-content-start gap-2">
+          <h1 className="text-start">IOT-SNMS</h1>
+        </div> */}
+        <div class="p-2 flex-grow-1">
+          <h1>IOT-SNMS</h1>
+        </div>
         <input
           className="form-control w-25"
           type="number"

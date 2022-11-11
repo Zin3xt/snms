@@ -8,7 +8,7 @@ export default function Home() {
         <title> IOT-SNMS</title>
         <meta name="keyword" content="web development, programing" />
       </Head>
-      <h1 className="text-center">IOT-SNMS</h1>
+
       <DatePicker />
     </>
   );

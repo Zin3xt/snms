@@ -3,13 +3,13 @@ import { options1 } from "../chartsOptions/nChart";
 import { options2 } from "../chartsOptions/pChart";
 import { options3 } from "../chartsOptions/kChart";
 import { options4 } from "../chartsOptions/tempOption";
-import { options5 } from "../chartsOptions/moisOption";
+import { options5 } from "../chartsOptions/moistOption";
 import { useCollection } from "../hooks/useCollection";
 import {
-  calculateAvarage,
+  calculateAverage as calculateAverage,
   nitrogenAnalysis,
   phosphorusAnalysis,
-  potassiumsAnalysis,
+  potassiumAnalysis as potassiumAnalysis,
 } from "./soilReadings";
 import {
   Chart as ChartJS,
@@ -58,12 +58,12 @@ export default function Graph(props) {
     .map((doc) => moment(doc.timestamp.toDate()).format("hh:mm:ss"))
     .reverse();
 
-  const nAverage = calculateAvarage(n);
+  const nAverage = calculateAverage(n);
   const nitrogen = nitrogenAnalysis(nAverage);
-  const pAverage = calculateAvarage(p);
+  const pAverage = calculateAverage(p);
   const phosphorus = phosphorusAnalysis(pAverage);
-  const kAverage = calculateAvarage(k);
-  const potassium = potassiumsAnalysis(kAverage);
+  const kAverage = calculateAverage(k);
+  const potassium = potassiumAnalysis(kAverage);
 
   const defaultData = {
     labels: timestamp, //[0,1,2,3,4,5,6....99]
@@ -71,12 +71,14 @@ export default function Graph(props) {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="row">
-        <div>
+        <div className="text-light">
+          <br></br>
           <h6>Nitrogen: {nitrogen}</h6>
           <h6>Phosphorus: {phosphorus}</h6>
           <h6>Potassium : {potassium}</h6>
+          <br></br>
         </div>
         <div className="col-lg-4">
           <Line
@@ -114,7 +116,7 @@ export default function Graph(props) {
           <Line
             data={{
               ...defaultData,
-              datasets: [{ data: temp, label: "%" }],
+              datasets: [{ data: temp, label: "°C" }],
             }}
             // width={100}
             // height={40}

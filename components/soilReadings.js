@@ -1,4 +1,4 @@
-export function calculateAvarage(read) {
+export function calculateAverage(read) {
   var total = 0;
   var count = 0;
 
@@ -35,7 +35,7 @@ export function phosphorusAnalysis(Phosphorus) {
   }
   return evaluation;
 }
-export function potassiumsAnalysis(potassium) {
+export function potassiumAnalysis(potassium) {
   let evaluation = null;
   if (potassium >= 0 && potassium <= 99.0) {
     evaluation = "low";
