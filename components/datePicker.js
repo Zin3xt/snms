@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import logo from "../components/picture/22ud6jeD_400x400.png";
 import { useState } from "react";
 import moment from "moment";
 import Graph from "./graph";
@@ -22,32 +24,43 @@ function DatePicker() {
         {/* <div className=" justify-content-start gap-2">
           <h1 className="text-start">IOT-SNMS</h1>
         </div> */}
-        <div class="p-2 flex-grow-1">
-          <h1>IOT-SNMS</h1>
+        <div className="p-2 flex-grow-1 d-flex align-items-center">
+          <div className="">
+            <Image
+              className=""
+              src={logo}
+              alt="Picture of the author"
+              width="80px"
+              height="80px"
+            />
+          </div>
+          <h1>Maiskarte</h1>
         </div>
-        <input
-          className="form-control w-25"
-          type="number"
-          placeholder="Limits"
-          onChange={(e) => {
-            const { value } = e.target;
-            // reject non-numeric characters and negative numbers
-            if (Number(value) > 0 && Number(value) <= 200) {
-              setLimit(value);
-              return;
-            }
-            setLimit(10);
-            alert("Negative number is not allowed and max is 200");
-          }}
-        />
-        <input
-          className="form-control w-25"
-          type="date"
-          onChange={(e) => setDate(moment(e.target.value).startOf("day"))}
-        />
-        <button className="btn btn-primary" onClick={handleApply}>
-          Apply
-        </button>
+        <div className="d-flex align-items-center ">
+          <input
+            className="p-2 form-control "
+            type="number"
+            placeholder="Limits"
+            onChange={(e) => {
+              const { value } = e.target;
+              // reject non-numeric characters and negative numbers
+              if (Number(value) > 0 && Number(value) <= 200) {
+                setLimit(value);
+                return;
+              }
+              setLimit(10);
+              alert("Negative number is not allowed and max is 200");
+            }}
+          />
+          <input
+            className="p-2 m-2 form-control "
+            type="date"
+            onChange={(e) => setDate(moment(e.target.value).startOf("day"))}
+          />
+          <button className="btn btn-primary " onClick={handleApply}>
+            Apply
+          </button>
+        </div>
       </div>
       <Graph limit={filters.limit} date={filters.date} />
     </>

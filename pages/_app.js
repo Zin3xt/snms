@@ -1,6 +1,8 @@
 import "../styles/globals.css";
+import "../styles/theme.css";
 import Layout from "../components/layout";
 import Router from "next/router";
+import { ThemeProvider } from "next-themes";
 
 import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
@@ -11,9 +13,11 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
