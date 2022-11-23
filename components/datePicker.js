@@ -57,7 +57,7 @@ function DatePicker() {
             type="date"
             onChange={(e) => setDate(moment(e.target.value).startOf("day"))}
           />
-          <button className="btn btn-primary " onClick={handleApply}>
+          <button className=" btn btn-primary " onClick={handleApply}>
             Apply
           </button>
         </div>
