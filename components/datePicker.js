@@ -4,7 +4,6 @@ import logo from "../components/picture/22ud6jeD_400x400.png";
 import { useState } from "react";
 import moment from "moment";
 import Graph from "./graph";
-import styles from "../styles/nav.module.css";
 
 function DatePicker() {
   const [date, setDate] = useState(moment().startOf("day"));

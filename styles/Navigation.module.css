@@ -1,8 +1,7 @@
 .nav {
+  display: flex;
   background-color: var(--color-nav);
   color: rgb(255, 253, 253);
-  display: flex;
-  align-items: center;
   padding: 10px;
   height: 100px;
   justify-content: center;
@@ -11,6 +10,7 @@
 .nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;

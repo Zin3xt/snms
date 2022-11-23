@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import React from "react";
-import {useEffect, useState} from "react";
-export default function darkMode(){
+import { useEffect, useState} from "react";
+import dark from "../styles/DarkSwitch.module.css"
+export default function DarkSwitch(){
     const [darkTheme, setDarkTheme] = useState(undefined);
 
   const handleToggle = (event) => {
@@ -29,4 +29,14 @@ export default function darkMode(){
     // Set initial darkmode to light
     setDarkTheme(initialColorValue === 'dark');
   }, []);
+  return(
+    <div className={dark.DarkSwitch}>
+          <form action="#">
+            <label className="switch">
+              <input type="checkbox" checked={darkTheme} onChange={handleToggle}/>
+              <spam className="slider"></spam>
+            </label>
+          </form>
+    </div>
+  )
 };

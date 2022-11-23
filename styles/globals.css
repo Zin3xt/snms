@@ -6,7 +6,7 @@
   --color-primary: #000;
   --color-button: #3d486c;
   --color-paragraph: #797979;
-  --color-button-text: rgb(255, 255, 255);
+  --color-button-text: rgb(219, 225, 219);
   --color-background: #ffffff;
   --color-nav: #5f8d4e;
 }
@@ -22,9 +22,11 @@
   --color-nav: #5f8d4e;
 }
 
+html,
+table,
 body {
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background-color: var(--color-background) !important;
+  color: var(--color-primary) !important;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
 }
@@ -59,7 +61,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary) !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -71,17 +73,17 @@ p {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--color-button);
+  background-color: var(--color-button) !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: white;
+  background-color: var(--color-background);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-background);
+  box-shadow: 0 0 1px;
 }
 
 input:checked + .slider:before {

@@ -1,5 +1,4 @@
 // create hook for firebase collection
-
 import { useState, useEffect } from "react";
 import { app } from "../firebase/initFirebase";
 import {

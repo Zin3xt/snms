@@ -15,7 +15,7 @@ function about() {
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
             <h1 className="p-2 flex-grow-1 text-opacity-75">About Us</h1>
-            <p className="lead text-white-50">
+            <p className="lead ">
               The IoT-SNMS is used for measuring the primary nutrient content of
               the soil such as Nitrogen, Phosphorus, and Potassium known as the
               (NPK). This was made to aid the problem faced by corn farmers, for
@@ -36,7 +36,7 @@ function about() {
               height="300px"
             />
           </div>
-          <div className="col flex-grow-1 ms-3 text-white-50">
+          <div className="col flex-grow-1 ms-3 ">
             <h1>JEMIECA OROT</h1>
             <p className="para1">
               Address:Gaboc, Lingion, Manolo Fortich Bukidnon
@@ -55,7 +55,7 @@ function about() {
               height="300px"
             />
           </div>
-          <div className="col flex-grow-1 ms-3 text-white-50">
+          <div className="col flex-grow-1 ms-3 ">
             <h1> JONARD MENESTERIO</h1>
             <p className="para1">
               Address: Lower Sosohon, Tankulan, Manolo Fortich Bukidnon
@@ -74,7 +74,7 @@ function about() {
               height="300px"
             />
           </div>
-          <div className="col flex-grow-1 ms-3 text-white-50">
+          <div className="col flex-grow-1 ms-3 ">
             <h1>MARICRIS LIBRES</h1>
             <p className="para1">Address: Dalirig, Manolo Fortich Bukidnon</p>
             <p>Phone: +639652261172</p>
@@ -91,7 +91,7 @@ function about() {
               height="300px"
             />
           </div>
-          <div className="col flex-grow-1 ms-3 text-white-50">
+          <div className="col flex-grow-1 ms-3 ">
             <h1>ZICHRI VICARIATO</h1>
             <p className="para1">
               Address: Gaboc, Lingion, Manolo Fortich Bukidnon

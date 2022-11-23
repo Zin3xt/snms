@@ -53,7 +53,7 @@ export default function Graph(props) {
   const k = docs.map((doc) => doc.k).reverse();
   const moisture = docs.map((doc) => doc.moisture).reverse();
   const temp = docs.map((doc) => doc.temperature).reverse();
-
+  console.log(docs);
   const timestamp = docs
     .map((doc) => moment(doc.timestamp.toDate()).format("hh:mm:ss"))
     .reverse();
@@ -73,7 +73,7 @@ export default function Graph(props) {
   return (
     <div>
       <div className="row">
-        <div className="text-light">
+        <div className="">
           <br></br>
           <h6>Nitrogen: {nitrogen}</h6>
           <h6>Phosphorus: {phosphorus}</h6>
