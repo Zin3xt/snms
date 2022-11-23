@@ -1,15 +1,12 @@
-import React from "react";
-import Head from "next/head";
-import DatePicker from "../components/datePicker";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-export default function Home() {
- const [darkTheme, setDarkTheme] = useState(undefined);
+import React from "react";
+import {useEffect, useState} from "react";
+export default function darkMode(){
+    const [darkTheme, setDarkTheme] = useState(undefined);
 
   const handleToggle = (event) => {
     setDarkTheme(event.target.checked);
   };
-
   useEffect(() => {
     if (darkTheme !== undefined) {
       if (darkTheme) {
@@ -32,27 +29,4 @@ export default function Home() {
     // Set initial darkmode to light
     setDarkTheme(initialColorValue === 'dark');
   }, []);
-  
-  return (
-    <>
-      <Head>
-        <title> Maiskarte</title>
-        <meta name="keyword" content="web development, programing" />
-      </Head>
-      <div className="container">
-        <div>
-          <form action="#">
-            <label className="switch">
-              <input type="checkbox" checked={darkTheme} onChange={handleToggle}/>
-              <spam className="slider"></spam>
-            </label>
-          </form>
-        </div>
-      </div>
-
-      <DatePicker />
-
-    
-    </>
-  );
 };
