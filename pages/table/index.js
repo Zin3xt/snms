@@ -1,7 +1,7 @@
 import moment from "moment";
 import { useState } from "react";
 import { useCollection } from "../../hooks/useCollection";
-import { Monthly, Weekly, Daily } from "../../components/Selector";
+import { Monthly, Weekly, Daily, BasicSelect } from "../../components/Selector";
 
 const time = new Date("11/14/2022");
 function Table() {
@@ -32,6 +32,7 @@ function Table() {
   };
   return (
     <>
+      <BasicSelect />
       <select
         className="form-select"
         aria-label="Default select example"

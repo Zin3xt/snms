@@ -10,6 +10,9 @@
     "test": "test"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.15",
     "bootstrap": "^5.2.2",
     "chart.js": "^3.9.1",
     "firebase": "^9.12.1",
